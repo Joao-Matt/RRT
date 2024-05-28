@@ -4,24 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRT Web Game</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Cube Color Switcher</title>
 </head>
 
 <body>
-    <div class="container">
-        <p id="welcomeMessage">Welcome to the RRT game, to start please press the start button.</p>
-        <button id="startButton">Start</button>
-        <div id="gameArea" style="display:none;">
-            <div id="greenBox" class="box green"></div>
-            <div id="redBox" class="box red"></div>
-            <div id="cube1" class="cube red"></div>
-            <div id="cube2" class="cube red"></div>
-            <div id="cube3" class="cube red"></div>
-            <div id="cube4" class="cube red"></div>
-        </div>
+    <div id="welcomeScreen" class="screen">
+        <h1>Welcome to the RRT Web Game</h1>
+        <p>Please enter a four-character string to begin:</p>
+        <input type="text" id="userInput" maxlength="4" />
+        <button id="startButton">Start Game</button>
     </div>
-    <script src="logic.js"></script>
+    <div id="explanationScreen" class="screen" style="display: none;">
+        <h1>RRT Explanation</h1>
+        <p>RRT explanation</p>
+        <button id="proceedButton">Proceed to Demo</button>
+    </div>
+    <div id="demoScreen" class="screen" style="display: none;">
+        <h1>Demo Session</h1>
+        <canvas id="demoCanvas" width="800" height="600"></canvas>
+        <div id="demoMessage"></div>
+    </div>
+    <div id="readyScreen" class="screen" style="display: none;">
+        <h1>Ready for the Game?</h1>
+        <p>When you are ready, click the button below to start the game.</p>
+        <button id="proceedToPhase1Button">Proceed to Game</button>
+    </div>
+    <div id="gameScreen" class="screen" style="display: none;">
+        <h1>RRT Web Game</h1>
+        <div id="timer"></div>
+        <div id="message"></div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <button id="restartButton">Restart Game</button>
+    </div>
+    <div id="newInstructionScreen" class="screen" style="display: none;">
+        <h1>New Instructions</h1>
+        <p>New instructions</p>
+        <button id="proceedToPhase2Button">Proceed to Phase 2</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

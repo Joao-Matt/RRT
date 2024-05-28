@@ -1,57 +1,36 @@
-/* styles.css */
 body {
-    display: flex;
-    justify-content: center;
-    /* Aligns items on the main axis (horizontal centering) */
-    align-items: center;
-    /* Aligns items on the cross axis (vertical centering) */
-    min-height: 100vh;
-    /* Minimum height of 100% of the viewport height */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
     margin: 0;
-    /* Removes default margin */
+    padding: 0;
 }
 
-.container {
+.screen {
     display: flex;
     flex-direction: column;
-    /* Aligns children vertically */
-    align-items: center;
-    /* Center-align items horizontally */
     justify-content: center;
-    /* Center-align items vertically (if there's enough space) */
-    min-height: 100vh;
-    /* Full viewport height */
+    align-items: center;
+    height: 100vh;
 }
 
-.box,
-.cube {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    display: inline-block;
-    /* This might be unnecessary if using flexbox, consider removing */
+canvas {
+    border: 1px solid #000;
+    margin-top: 20px;
+    margin: auto;
+    /* Center horizontally */
+    display: block;
 }
 
-.red {
-    background-color: #ff0000;
-    border: 2px solid #ff0000;
-}
-
-.green {
-    background-color: #00ff00;
-    border: 2px solid #008000;
-}
-
-#welcomeMessage {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-#startButton {
+button {
+    margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    cursor: pointer;
-    /* Makes it clear the button is clickable */
-    margin-bottom: 20px;
+}
+
+input {
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
 }
